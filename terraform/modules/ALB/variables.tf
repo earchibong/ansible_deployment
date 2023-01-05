@@ -1,10 +1,10 @@
-# The security froup for external loadbalancer
+# The security group for external loadbalancer
 variable "public-sg" {
   description = "Security group for external load balancer"
 }
 
 
-# The public subnet froup for external loadbalancer
+# The public subnet group for external loadbalancer
 variable "public-sbn-1" {
   description = "Public subnets to deploy external ALB"
 }
