@@ -1,4 +1,4 @@
-region = "us-east-1"
+region = "eu-west-2"
 
 vpc_cidr = "10.0.0.0/16"
 
@@ -14,6 +14,13 @@ preferred_number_of_public_subnets = 2
 
 preferred_number_of_private_subnets = 4
 
+tags = {
+  Enviroment      = "dev"
+  Owner-Email     = "hello+@mintedcreative.com"
+  Managed-By      = "Terraform"
+  Billing-Account = "1234567890"
+}
+
 environment = "dev"
 
 ami-web = "ami-00a45107f7c3455a5"
@@ -26,14 +33,9 @@ ami-sonar = "ami-0f8bd95a744e074b8"
 
 keypair = "devops"
 
-master-password = "devopspblproject"
+master-password = "devopspbl"
 
-master-username = "david"
+master-username = "libby"
 
-account_no = "696742900004"
+account_no = "350100602815"
 
-tags = {
-  Owner-Email     = "infradev-segun@darey.io"
-  Managed-By      = "Terraform"
-  Billing-Account = "1234567890"
-}

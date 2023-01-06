@@ -9,7 +9,7 @@ resource "aws_kms_key" "ACS-kms" {
     {
       "Sid": "Enable IAM User Permissions",
       "Effect": "Allow",
-      "Principal": { "AWS": "arn:aws:iam::${var.account_no}:user/segun" },
+      "Principal": { "AWS": "arn:aws:iam::${var.account_no}:user/terraform" },
       "Action": "kms:*",
       "Resource": "*"
     }
@@ -29,14 +29,13 @@ resource "aws_efs_file_system" "ACS-efs" {
   encrypted  = true
   kms_key_id = aws_kms_key.ACS-kms.arn
 
-tags = merge(
+  tags = merge(
     var.tags,
     {
-      Name = "ACS-file-system"
+      Name = "ACS-efs"
     },
   )
 }
-
 
 # set first mount target for the EFS 
 resource "aws_efs_mount_target" "subnet-1" {
@@ -97,4 +96,3 @@ resource "aws_efs_access_point" "tooling" {
 
   }
 }
-

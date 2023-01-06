@@ -2,7 +2,7 @@
 ##creating bucket for s3 backend
 #########################
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "pbl-test-18"
+  bucket = "pbl18"
 
   versioning {
     enabled = true
@@ -100,8 +100,8 @@ module "EFS" {
 
 module "RDS" {
   source          = "./modules/RDS"
-  db-password     = var.master-password
-  db-username     = var.master-username
+  master-password     = var.master-password
+  master-username     = var.master-username
   db-sg           = [module.security.datalayer-sg]
   private_subnets = [module.VPC.private_subnets-3, module.VPC.private_subnets-4]
 }
