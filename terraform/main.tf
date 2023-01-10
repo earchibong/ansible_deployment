@@ -2,7 +2,7 @@
 ##creating bucket for s3 backend
 #########################
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "pbl18"
+  bucket = "pbl-test-19"
 
   versioning {
     enabled = true

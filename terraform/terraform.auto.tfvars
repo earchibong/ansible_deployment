@@ -23,13 +23,13 @@ tags = {
 
 environment = "dev"
 
-ami-web = "ami-00a45107f7c3455a5"
+ami-web = "ami-0c68a8d6a70ee08fb"
 
-ami-bastion = "ami-0dbc99375eba56ff4"
+ami-bastion = "ami-03155ab24905dad75"
 
-ami-nginx = "ami-010bd88cc8f5997f3"
+ami-nginx = "ami-0771c6e0186a87283"
 
-ami-sonar = "ami-0f8bd95a744e074b8"
+ami-sonar = "ami-099c058ba312a95bd"
 
 keypair = "devops"
 
