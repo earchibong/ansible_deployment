@@ -2,7 +2,7 @@ plugin: amazon.aws.aws_ec2
 aws_profile: default
 
 regions:
-  - "eu-west-2"
+  - "eu-west-2a"
 
 strict: False
 
